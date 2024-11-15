@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .card {
+        border: 1px solid black;
+        width: 300px;
+        height: 300px;
+    }
+
+    .blue {
+        background-color: blue;
+
+    }
+
+    .yellow {
+        background-color: yellow;
+    }
+</style>
+
+<body>
+
+
+    <div class="card">
+        <button id="blue">Blue</button>
+        <button id="yellow">Yellow</button>
+    </div>
+
+
+    <script>
+
+        let card = document.querySelector('.card')
+
+        let blue = document.getElementById('blue');
+        let yellow = document.getElementById('yellow');
+
+        blue.addEventListener('click',()=>{
+            // card.style.backgroundColor = "blue"
+
+            card.className = "card blue"
+        })
+
+        yellow.addEventListener('click',()=>{
+            // card.style.backgroundColor = "yellow"
+
+            card.className = "card yellow"
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>

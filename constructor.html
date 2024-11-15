@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .cards{
+            /* border: 1px solid black; */
+        }
+    </style>
+
+    <div class="cards">
+
+    </div>
+    
+
+
+<script>
+
+
+    // let bank = [
+    //     {
+    //       name : 'Prashant',
+    //       accountNumber : 123456789,
+    //       balance : 150,
+    //       ifsc : 'UBIN123'
+    //     },
+    //     {
+    //       name : 'Babu the Kashyap' ,
+    //       accountNumber : 987654321,
+    //       balance : 1500,
+    //       ifsc : 'SBIN123'
+    //     }
+    // ]
+
+    let cards = document.querySelector('.cards')
+    let wrapper = document.createElement('div')
+
+    function Bank(name, accountNumber, balance,ifsc){// take parameters and create object
+        this.name = name; // convert parameters into key values
+        this.accountNumber = accountNumber
+        this.balance = balance;
+        this.ifsc = ifsc;
+    }
+
+
+    let myBank = [
+        new Bank('Prashant',123456789,150,'UBIN123'),// pass arguments
+        new Bank('Babu the Kashyap',987654321,1500,'SBIN123'), //pass arguments
+        new Bank('two face',159357684,15000000000,'SBIN357'), //pass arguments
+
+    ]
+
+
+
+      myBank.forEach((val)=>{
+        let h1 = document.createElement('h1')
+        h1.textContent = (`Name: ${val.name}`);
+        
+        wrapper.appendChild(h1)
+
+        // let str = 'account number';
+
+        // let p0 = document.createElement('p');
+        // p0.appendChild(str)
+
+        // wrapper.appendChild(p0)
+
+        let p = document.createElement('p');
+        p.textContent =(`Account number: ${val.accountNumber}`) ;
+
+        wrapper.appendChild(p)
+
+
+        let p1 = document.createElement('p');
+
+        p1.textContent = (`Balance : ${val.balance}`);
+
+        wrapper.appendChild(p1)
+
+        let p2 = document.createElement('p');
+
+        p2.textContent = (`IFSC code: ${val.ifsc}`)
+
+        wrapper.appendChild(p2)
+
+        cards.appendChild(wrapper)
+
+        wrapper.style.border="1px solid black"
+
+        
+
+
+
+      })
+
+
+</script>
+
+</body>
+</html>

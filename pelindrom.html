@@ -1,0 +1,36 @@
+<script>
+
+    let userInput = prompt('enter any word');
+
+    Input = userInput.split("");
+    let arr = [];
+    let arrtwo = []
+
+    let i = 0;
+
+    for (let i = 0; i < Input.length; i++) {
+        arr.push(Input[i]);
+    }
+
+    for (let j = Input.length - 1; j >= 0; j--) {
+        arrtwo.push(Input[j])
+    }
+
+    // console.log(arr)
+
+    // console.log(arrtwo)
+
+    let answer;
+    for (let k = 0; k < arr.length; k++) {
+
+        if (arr[k] == arrtwo[k]) {
+            answer = true;
+        } else {
+            answer = false;
+        }
+    }
+
+
+    console.log(answer)
+
+</script>

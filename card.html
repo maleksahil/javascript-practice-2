@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .btn button {
+            margin: 0 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card"></div>
+
+    <script>
+        let wrapper = document.querySelector('.card');
+
+        let data = [
+            {
+                img: 'k.a.j.jpg',
+                h1: 'Cat',
+                p: 'Cat is a domestic animal',
+                plus: '+',
+                minus: '-',
+                number: 1,
+            },
+        ];
+
+        data.forEach((val) => {
+            let img = document.createElement('img');
+            img.src = val.img;
+
+            wrapper.appendChild(img);
+
+            let h1 = document.createElement('h1');
+            h1.textContent = val.h1;
+            wrapper.appendChild(h1);
+
+            let p = document.createElement('p');
+            p.textContent = val.p;
+            wrapper.appendChild(p);
+
+            let div1 = document.createElement('div');
+            div1.className = 'btn';
+            wrapper.appendChild(div1);
+
+            let button1 = document.createElement('button');
+            button1.textContent = val.plus;
+            div1.appendChild(button1);
+
+            let para = document.createElement('p');
+            para.textContent = val.number;
+            para.id = 'number';
+            div1.appendChild(para);
+
+            let button2 = document.createElement('button');
+            button2.textContent = val.minus;
+            div1.appendChild(button2);
+
+          
+                button1.addEventListener('click', () => {
+                 let scale = val.number++;
+             
+                para.textContent = val.number;
+                img.style.transform=`scale(${(scale*10)}%)`;
+            });
+
+            
+            
+            button2.addEventListener('click', () => {
+                let scale = val.number--;
+                para.textContent = val.number;
+                img.style.transform=`scale(${scale/2}%)`;
+            });
+        });
+
+        console.log(wrapper);
+    </script>
+</body>
+
+</html>

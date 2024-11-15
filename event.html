@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+</head>
+<style>
+    img {
+        margin-left: 100px;
+        margin-top: 100px;
+    }
+
+    #tooltip{
+        transition: all 1s ease;
+    }
+
+</style>
+
+<body>
+
+
+    <button id="btn">Click me</button>
+
+    <img src="k.a.j.jpg" alt="aa" height="200px" width="200px" id="tooltip" >
+
+
+
+    <script>
+
+        // const image = document.getElementById('image');
+
+        // image.addEventListener('dblclick', () => {
+        //     image.style.transform = 'scale(2)'
+        // })
+
+        // const button = document.getElementById('btn');
+
+        // button.addEventListener('click', () => {
+
+        //     console.log('hello world');
+        // });
+
+
+        const tooltip = document.getElementById('tooltip');
+
+        tooltip.addEventListener('mouseover', () => {
+            tooltip.style.transform = 'scale(2)';
+        });
+
+        tooltip.addEventListener('mouseout', () => {
+            tooltip.style.transform = 'scale(1)';
+        });
+
+    </script>
+</body>
+
+</html>

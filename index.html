@@ -1,0 +1,260 @@
+<script>
+
+  // const fruits = ["apple", "banana"];
+
+  // fruits.push("orange","grapes");
+
+  // for ( i = 0; i < 4; i++){
+  //     fruits.push(i);
+  //     console.log(fruits[i])
+  // }
+
+  // const numbers = [0];
+
+  // for (i = 1; i<=10; i++){
+  //     numbers.push(i);
+  //     // console.log(numbers[i]);
+  // }
+
+  // let arr = [];
+
+  // let number = ["hello", "World", "!"];
+
+  // arr.push(number);
+
+  // console.log(arr);
+
+  // let names = [];
+
+  // let words = ["Bob","alice","charlie"];
+
+  // names.push(words);
+
+  // let words2 = ["adam","eve"];
+
+  // names.push(words2);
+
+  // console.log(names);
+
+  // let numbers = [];
+
+  // for (let i = 0; i < 5; i++){
+  //     numbers.push(i+1);
+  //     console.log(numbers[i]);
+  // }
+
+  // let colors = [];
+
+  // let subjects = ["Red","Green","Blue"];
+
+  // colors.push(subjects);
+
+  // const removecolor = subjects.pop();
+
+  // colors.push(removecolor);
+
+  // console.log(colors);
+
+  // let fun = (a,b) =>{
+  //     return a-b;
+  // }
+
+  // let total = fun (250,100);
+
+  // console.log(total);
+
+  // function findMinMax(arr) {
+  //   if (arr.length === 0) {
+  //     return { min: null, max: null }; // Handle empty array
+  //   }
+
+  //   let min = arr[0];
+  //   let max = arr[0];
+
+  //   for (let i = 1; i < arr.length; i++) {
+  //     if (arr[i] < min) {
+  //       min = arr[i];
+  //     } else if (arr[i] > max) {
+  //       max = arr[i];
+  //     }
+  //   }
+
+  //   return { min, max };
+  // }
+
+  // Example usage:
+  // const numbers = [10, 5, 20, 3, 15];
+  // const result = findMinMax(numbers);
+
+  // console.log("Minimum value:", result.min);
+  // console.log("Maximum value:", result.max);
+
+  // let numbers = [];
+  // numbers.push(1, 2, 3);
+  // numbers.push("hello");
+
+  // let nestedArray = [[1, 2], [3, 4]];
+  // nestedArray[0].push(5);
+
+  // console.log(nestedArray);
+
+  // let person = {
+  //     name: "Alice",
+  //     age: 30,
+  //     city: "New York"
+  // };
+
+  // for (let property in person) {
+  //     console.log(property + ": " + person[property]);
+  // }
+
+  // let arr = [];
+
+  // let userInput = parseFloat(prompt("enter How many numbers do you want to print"));
+
+  // let i =0;
+  // for (let i = 0; i < userInput; i++) {
+  //   let number = parseFloat(prompt());
+  //   arr[i] = number;
+  // }
+
+  // console.log(arr);
+
+  // let max = arr[0];
+
+  // for (let j = 0; j < userInput; j++) {
+  //     if(max < arr[j]){
+  //       max = arr[j]
+  //     }
+  // }
+
+  // console.log(max);
+
+  //   let arr = [];
+  //   let sum = 0;
+
+  // let userInput = parseFloat(prompt("enter How many numbers do you want to print"));
+
+  // for (let i = 0; i < userInput; i++) {
+  //   let number = parseFloat(prompt());
+  //   arr.push(number);
+  // }
+
+  // for (let j =0; j<userInput; j++){
+  //   if(arr[j] %2 != 0){
+  //     sum += arr[j];
+  //   }
+  // }
+
+  // console.log(sum);
+
+  // let arr = [1,2,3,4,5,6];
+
+  // let halfarr = [];
+
+  // // let HalfLength = arr.length/2;
+
+  // for (let i = 0; i < arr.length/2; i++){
+
+  //    halfarr.push(arr[i]);
+
+  // }
+
+  // // console.log(halfarr);
+
+  // let middleNumber = halfarr.pop();
+
+  // console.log(middleNumber);
+
+  // let arr = [1,2,3,4,5,6];
+
+  // let [x,y,z,...rest] = arr;
+
+  // if(arr.length < arr[1]){
+  //   console.log(x,y,z);
+  // }else{
+  //   console.log(x,y,z,rest);
+  // }
+
+  // if (arr.length == 1){
+
+  //   console.log(x);
+
+  // }else if (arr.length == 2){
+
+  //   console.log(x,y);
+
+  // }else if(arr.length == 3){
+
+  //   console.log(x,y,z);
+
+  // }else{
+
+  //   console.log(x,y,z,...rest);
+  // }
+
+  // let str = "hello world";
+
+  // let js = "js";
+
+  // console.log(str.concat(" ",js));
+  // console.log(str.indexOf("world"));
+
+  // console.log(str.slice(5,11));
+
+  // console.log(str.toUpperCase());
+
+  // console.log(str.toLocaleLowerCase());
+
+  // console.log(str.split(" "));
+
+  // console.log(str.repeat(3));
+
+  // console.log(str.search("world"));
+
+  // let num = 100;
+
+  // console.log(num.toString());
+
+  // num = num.toString;
+
+  // console.log(typeof num);
+  // let numbers = [10, 5, 20, 3, 15];
+
+  // let largest = numbers[0]; //10 
+
+  // let secondLargest = numbers[0]; //10
+
+
+  // for (let i = 0; i < numbers.length; i++) { // 0 to 4
+
+  //   if (numbers[i] > largest) {
+
+  //     secondLargest = largest;  // largest = 10
+
+  //     largest = numbers[i]; // largest = 20
+
+  //   } else if (numbers[i] > secondLargest && numbers[i] !== largest) {  // largest = 20
+
+  //     secondLargest = numbers[i];
+
+  //   }
+
+  // }
+
+  // console.log("Second largest number:", secondLargest);
+  // console.log("largest numbber is:",largest);   
+
+  setTimeout(()=>{
+   
+   console.log("Set Time Out")
+
+   window.location.href = "https://poki.com/en/online"
+  },2000);
+
+  setInterval(()=>{
+       console.log("SetIntervel")
+  },2000);
+
+
+</script>

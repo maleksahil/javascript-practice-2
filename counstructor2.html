@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        function employee (name,salery,position,location){
+            this.name = name;
+            this.salery = salery;
+            this.position = position;
+            this.location = location;
+        }
+
+        let arr = [
+        new employee ('arman','15000','junior designer','amreli'),
+        new employee ('hasan','25000','senior designer','rajkot'),
+        new employee ('rajik','35000','developer','junagadh')
+    ]
+
+
+    arr.forEach((val)=>{
+        console.log(val.location)
+    })
+
+
+       
+    </script>
+</body>
+</html>
