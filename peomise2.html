@@ -1,0 +1,17 @@
+<script>
+    console.log('start')
+
+    function fetchData(step){
+        return new Promise((resolve)=>{
+
+            setTimeout(()=>{
+                console.log(step)
+                resolve()
+            },1000)
+        })
+    }
+
+    fetchData("step 1: Fetch User Data")
+    .then(()=>fetchData("step 2 : processing"))
+    .then(()=>fetchData("step 3 : result"))
+</script>
